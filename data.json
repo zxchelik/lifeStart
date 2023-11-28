@@ -1,0 +1,19 @@
+{
+  "message": {
+    "menu": "ГЛАВНОЕ МЕНЮ",
+    "digest": "ДАЙДЖЕСТ",
+    "result": {
+      "result1": "",
+      "result2": ""
+    },
+    "build": {
+      "build1": "",
+      "build2": ""
+    }
+  },
+  "question": {
+    "start": "",
+    "question1": "",
+    "question2": ""
+  }
+}

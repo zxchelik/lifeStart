@@ -8,6 +8,6 @@ from data import DATA
 router = Router()
 
 
-@router.message(F.text.lower().in_(["дайджест", "digest"]))
+@router.message()
 async def digest(msg: Message):
-    await msg.answer(DATA.message.digest, reply_markup=keyboard.reply.digest)
+    await msg.answer("Что-то пошло не так")

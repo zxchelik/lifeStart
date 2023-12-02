@@ -10,6 +10,8 @@ class my_data:
         def __init__(self, message):
             self.menu = message['menu']
             self.digest = message['digest']
+            self.faq = message['faq']
+            self.sections = message['sections']
             self.result = self.Result(message['result'])
             self.build = self.Build(message['build'])
 

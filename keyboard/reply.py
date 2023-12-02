@@ -7,7 +7,7 @@ menu = ReplyKeyboardMarkup(keyboard=[
     [KeyboardButton(text="Тест")]
 ], resize_keyboard=True)
 
-digest = ReplyKeyboardMarkup(keyboard=[
+sections = ReplyKeyboardMarkup(keyboard=[
     [KeyboardButton(text="Корпус 1")],
     [KeyboardButton(text="Корпус 2")],
     [KeyboardButton(text="Корпус 3")],

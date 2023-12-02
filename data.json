@@ -2,6 +2,8 @@
   "message": {
     "menu": "ГЛАВНОЕ МЕНЮ",
     "digest": "ДАЙДЖЕСТ",
+    "sections": "СЕКЦИИ",
+    "faq": "ВОПРОСЫ",
     "result": {
       "result1": "",
       "result2": ""

@@ -1,7 +1,3 @@
-import time
+from data import MyData
 
-from data import DATA
-
-
-print(DATA["message"]["menu"])
-time.sleep(5)
+print(MyData().message.digest)

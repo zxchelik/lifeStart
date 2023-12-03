@@ -1,10 +1,16 @@
 import json
 
 
-class my_data:
-    def __init__(self, data):
+class MyData:
+    _instance = None
+
+    def __init__(self):
+        data = read_json()
         self.message = self.Message(data['message'])
-        self.question = [(q["message"], [(ans[0], ans[1]) for ans in q["answers"]]) for q in data["questions"]]
+        self.question = [
+            (q["message"], [(ans[0], ans[1]) for ans in q["answers"]])
+            for q in data["questions"]]
+
 
     class Message:
         def __init__(self, message):
@@ -26,19 +32,18 @@ class my_data:
                 self.build1 = build['build1']
                 self.build2 = build['build2']
 
-    # class Question:
-    #     def __init__(self, question):
-    #         self.start = question['start']
-    #         self.question1 = question['question1']
-    #         self.question2 = question['question2']
+    @classmethod
+    def instance(cls):
+        if cls._instance is None:
+            cls._instance = cls()
+        return cls._instance
 
 
-def read_data():
-    print("СЧИТЫВАНИЕ")
+def read_json():
     file_path = "data.json"
     with open(file_path, "r", encoding="utf-8") as json_file:
         data = json.load(json_file)
     return data
 
 
-DATA = my_data(read_data())
+DATA = MyData.instance()

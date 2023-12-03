@@ -4,18 +4,17 @@
 
 
 from aiogram import Router
-from aiogram.types import Message, CallbackQuery
+from aiogram.types import CallbackQuery
 from aiogram import F
-from aiogram.fsm import state
 
 import keyboard.callback
+import keyboard.reply
 from data import DATA
 
 router = Router()
 
-# ДОПИЛИТЬ
-# нужно чтобы отвечала на menu из keyboard.callback.call_menu_test.
-# поставить стейт test.
-@router.callback_query()
+
+@router.callback_query(F.data == 'menu')
 async def menu_callback(callback: CallbackQuery):
-    pass
+    await callback.message.delete()
+    await callback.message.answer(DATA.message.menu, reply_markup=keyboard.reply.menu)

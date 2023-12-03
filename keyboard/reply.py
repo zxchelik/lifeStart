@@ -1,11 +1,9 @@
 from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 
 menu = ReplyKeyboardMarkup(keyboard=[
-    [KeyboardButton(text="Дайджест")],
-    [KeyboardButton(text="FAQ")],
-    [KeyboardButton(text="Секции")],
-    [KeyboardButton(text="Тест")]
-], resize_keyboard=True)
+    [KeyboardButton(text="Тест"), KeyboardButton(text="Секции")],
+    [KeyboardButton(text="Дайджест"), KeyboardButton(text="FAQ")]
+], resize_keyboard=True, one_time_keyboard=True)
 
 sections = ReplyKeyboardMarkup(keyboard=[
     [KeyboardButton(text="Корпус 1")],

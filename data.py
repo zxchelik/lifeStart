@@ -4,7 +4,7 @@ import json
 class my_data:
     def __init__(self, data):
         self.message = self.Message(data['message'])
-        self.question = self.Question(data['question'])
+        self.question = [(q["message"], [(ans[0], ans[1]) for ans in q["answers"]]) for q in data["questions"]]
 
     class Message:
         def __init__(self, message):
@@ -26,11 +26,11 @@ class my_data:
                 self.build1 = build['build1']
                 self.build2 = build['build2']
 
-    class Question:
-        def __init__(self, question):
-            self.start = question['start']
-            self.question1 = question['question1']
-            self.question2 = question['question2']
+    # class Question:
+    #     def __init__(self, question):
+    #         self.start = question['start']
+    #         self.question1 = question['question1']
+    #         self.question2 = question['question2']
 
 
 def read_data():

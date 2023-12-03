@@ -12,6 +12,7 @@ class my_data:
             self.digest = message['digest']
             self.faq = message['faq']
             self.sections = message['sections']
+            self.call_menu_test = message["call_menu_test"]
             self.result = self.Result(message['result'])
             self.build = self.Build(message['build'])
 

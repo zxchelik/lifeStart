@@ -22,8 +22,7 @@ def get_inline_kb(buttons: list[Tuple]) -> InlineKeyboardMarkup:
 
 # Клавиатура для админ панели, чтобы установить Дайджест.
 admin = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text="установить дайджест", callback_data="set_digest")],
-    [InlineKeyboardButton(text="изменить данные json", callback_data="set_data")]
+    [InlineKeyboardButton(text="изменить FAQ", callback_data="set_faq")]
 ], resize_keyboard=True)
 
 

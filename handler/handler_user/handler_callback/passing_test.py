@@ -8,6 +8,8 @@ from keyboard.callback import get_inline_kb
 from data import Data
 from state import UserState
 
+from utils.generate_result_test import generate_result_test
+
 router = Router()
 
 
@@ -34,5 +36,7 @@ async def passing_test(callback: CallbackQuery, state: FSMContext):
         await callback.message.edit_text(text=text,
                                          reply_markup=get_inline_kb(answers))
     except IndexError:
-        await callback.message.edit_text(
-            text=", ".join([str(i) for i in user_answers]))
+        # Если вопросы в data_message закончились.
+        answer_user = data["user_answers"]
+        await state.clear()
+        await callback.message.edit_text(generate_result_test(answer_user))

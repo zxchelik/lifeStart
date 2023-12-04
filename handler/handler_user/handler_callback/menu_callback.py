@@ -9,7 +9,7 @@ from aiogram import F
 
 import keyboard.callback
 import keyboard.reply
-from data import DATA
+from data import Data
 
 router = Router()
 
@@ -17,4 +17,4 @@ router = Router()
 @router.callback_query(F.data == 'menu')
 async def menu_callback(callback: CallbackQuery):
     await callback.message.delete()
-    await callback.message.answer(DATA.message.menu, reply_markup=keyboard.reply.menu)
+    await callback.message.answer(Data().message.menu, reply_markup=keyboard.reply.menu)

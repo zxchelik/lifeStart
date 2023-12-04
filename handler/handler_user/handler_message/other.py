@@ -1,9 +1,5 @@
 from aiogram import Router
-from aiogram.types import Message, ReplyKeyboardRemove
-from aiogram import F
-
-import keyboard.reply
-from data import DATA
+from aiogram.types import Message
 
 router = Router()
 

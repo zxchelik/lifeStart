@@ -1,3 +1,4 @@
-from data import MyData
+from utils.change_digest_dict import change_digest
 
-MyData.instance()
+
+change_digest("Даааайджест")

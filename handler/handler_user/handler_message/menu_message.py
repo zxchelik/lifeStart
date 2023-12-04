@@ -8,11 +8,11 @@ from aiogram.types import Message
 from aiogram import F
 
 import keyboard.reply
-from data import DATA
+from data import Data
 
 router = Router()
 
 
 @router.message(F.text.lower().in_(["/start", "меню", "вернуться в меню", "назад", "назад в меню"]))
 async def menu_message(msg: Message):
-    await msg.answer(DATA.message.menu, reply_markup=keyboard.reply.menu)
+    await msg.answer(Data().message.menu, reply_markup=keyboard.reply.menu)

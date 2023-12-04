@@ -8,12 +8,12 @@ from aiogram.types import Message
 from aiogram import F
 
 # import keyboard.reply
-from data import DATA
+from data import Data
 
 router = Router()
 
 
 @router.message(F.text.lower().in_(["секции"]))
 async def sections(msg: Message):
-    await msg.answer(DATA.message.sections)  # reply_markup=keyboard.reply.sections
+    await msg.answer(Data().message.sections)  # reply_markup=keyboard.reply.sections
     # Убрали клавиатуру для выбора секций в корпусах.

@@ -3,7 +3,6 @@ from typing import Tuple
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
-from data import DATA
 
 # Клавиатура для меню вызова теста.
 call_menu_test = InlineKeyboardMarkup(inline_keyboard=[
